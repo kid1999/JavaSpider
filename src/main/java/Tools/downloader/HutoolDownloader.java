@@ -27,7 +27,7 @@ public class HutoolDownloader implements Downloader{
             connection.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
             DataInputStream in = new DataInputStream(connection.getInputStream());
             BufferedOutputStream out = FileUtil.getOutputStream(filePath);
-            IoUtil.copy(in, out, IoUtil.DEFAULT_BUFFER_SIZE);
+            IoUtil.copy(in, out, IoUtil.DEFAULT_BUFFER_SIZE);       // 本质一样
         } catch (Exception e) {
             e.printStackTrace();
         }
